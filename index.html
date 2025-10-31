@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarceloHR Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-900 text-white h-screen flex flex-col items-center justify-center font-sans relative">
+
+  <!-- Selector de idioma -->
+  <div class="absolute top-5 right-5">
+    <button id="langToggle" class="text-gray-400 hover:text-white text-sm border border-gray-600 px-3 py-1 rounded-full transition-all">
+      EN
+    </button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="text-center" id="content">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4 tracking-tight">
+      MarceloHR Technologies
+    </h1>
+    <p id="tagline" class="text-lg md:text-xl text-gray-400 mb-8">
+      Productos y servicios de TI modernos y eficientes
+    </p>
+    <a id="contactBtn" href="mailto:contact@marcelohr.com"
+       class="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-200 transition-all duration-200">
+      Contáctame
+    </a>
+  </div>
+
+  <footer class="absolute bottom-5 text-sm text-gray-600">
+    © 2025 MarceloHR Technologies
+  </footer>
+
+  <!-- Script de idioma -->
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    const tagline = document.getElementById('tagline');
+    const contactBtn = document.getElementById('contactBtn');
+    let currentLang = 'es';
+
+    langToggle.addEventListener('click', () => {
+      if (currentLang === 'es') {
+        tagline.textContent = 'Modern and efficient IT products and services';
+        contactBtn.textContent = 'Contact Me';
+        langToggle.textContent = 'ES';
+        currentLang = 'en';
+      } else {
+        tagline.textContent = 'Productos y servicios de TI modernos y eficientes';
+        contactBtn.textContent = 'Contáctame';
+        langToggle.textContent = 'EN';
+        currentLang = 'es';
+      }
+    });
+  </script>
+
+</body>
+</html>
